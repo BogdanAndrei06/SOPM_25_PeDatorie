@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PeDatorie | Shop All</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>PeDatorie</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html" class="active">Shop All</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="shop">
+    <h2>Toate produsele</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://via.placeholder.com/200x250" alt="Tricou negru">
+        <h3>Tricou Negru</h3>
+        <p>79 RON</p>
+        <button onclick="addToCart('Tricou Negru')">Adaugă în coș</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/200x250" alt="Hanorac gri">
+        <h3>Hanorac Gri</h3>
+        <p>129 RON</p>
+        <button onclick="addToCart('Hanorac Gri')">Adaugă în coș</button>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/200x250" alt="Pantaloni sport">
+        <h3>Pantaloni Sport</h3>
+        <p>99 RON</p>
+        <button onclick="addToCart('Pantaloni Sport')">Adaugă în coș</button>
+      </div>
+    </div>
+
+    <div id="cart" class="cart">
+      <h3>Coșul tău</h3>
+      <ul id="cart-items"></ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 PeDatorie. Toate drepturile rezervate.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
