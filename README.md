@@ -1,2 +1,2 @@
-# peDatorie
-Magazin web peDatorie
+# PeDatorie
+Magazin PeDatorie
