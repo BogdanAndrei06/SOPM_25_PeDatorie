@@ -1,54 +1,71 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PeDatorie | Shop All</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PeDatorie — Shop</title>
+  <link rel="stylesheet" href="css/style-shop.css" />
+  <script defer src="js/script.js"></script>
 </head>
 <body>
-  <header>
-    <h1>PeDatorie</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="shop.html" class="active">Shop All</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">PD</span>
+        <span class="brand-name">PeDatorie</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link active">Shop</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <button class="cta-btn">Coș</button>
+    </div>
   </header>
 
-  <main class="shop">
-    <h2>Toate produsele</h2>
-    <div class="products">
-      <div class="product">
-        <img src="https://via.placeholder.com/200x250" alt="Tricou negru">
-        <h3>Tricou Negru</h3>
-        <p>79 RON</p>
-        <button onclick="addToCart('Tricou Negru')">Adaugă în coș</button>
+  <main>
+    <section class="shop-hero">
+      <div class="container">
+        <h2 class="section-title">New Drop</h2>
+        <p class="muted">Produse alese — alb & negru, minimalist.</p>
       </div>
-      <div class="product">
-        <img src="https://via.placeholder.com/200x250" alt="Hanorac gri">
-        <h3>Hanorac Gri</h3>
-        <p>129 RON</p>
-        <button onclick="addToCart('Hanorac Gri')">Adaugă în coș</button>
-      </div>
-      <div class="product">
-        <img src="https://via.placeholder.com/200x250" alt="Pantaloni sport">
-        <h3>Pantaloni Sport</h3>
-        <p>99 RON</p>
-        <button onclick="addToCart('Pantaloni Sport')">Adaugă în coș</button>
-      </div>
-    </div>
+    </section>
 
-    <div id="cart" class="cart">
-      <h3>Coșul tău</h3>
-      <ul id="cart-items"></ul>
-    </div>
+    <section class="product-grid container">
+      <article class="product-card">
+        <div class="product-media">
+          <img src="#" alt="Produs 1">
+        </div>
+        <div class="product-body">
+          <h4 class="product-title">Hanorac minimalist</h4>
+          <p class="product-price">149 RON</p>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-media">
+          <img src="#" alt="Produs 2">
+        </div>
+        <div class="product-body">
+          <h4 class="product-title">Tricou alb oversized</h4>
+          <p class="product-price">99 RON</p>
+        </div>
+      </article>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 PeDatorie. Toate drepturile rezervate.</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <strong>PeDatorie</strong>
+        <p class="muted">© <span id="year2"></span> PeDatorie</p>
+      </div>
+      <div class="footer-right">
+        <a class="muted" href="mailto:contact@pedatorie.ro">contact@pedatorie.ro</a>
+      </div>
+    </div>
   </footer>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
