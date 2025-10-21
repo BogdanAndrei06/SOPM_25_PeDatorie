@@ -189,3 +189,180 @@
   opacity: 1;
 }
 
+/* === SOCIAL ICONS PE HERO === */
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 26px;
+}
+
+.social-icons img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  filter: brightness(90%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.15);
+  filter: brightness(110%);
+}
+
+
+/* === RESTUL === */
+.hero {padding:80px 0}
+
+
+/* === BEST OF SECTION === */
+.best-of {
+  padding: 60px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.best-of .section-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+/* Containerul orizontal */
+.image-marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-track {
+  display: flex;
+  gap: 12px;
+  animation: slideImages 15s linear infinite;
+}
+
+.image-track img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover efect – stop animatie + zoom subtil */
+.image-marquee:hover .image-track {
+  animation-play-state: paused;
+}
+
+.image-track img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Animația de mișcare continuă */
+@keyframes slideImages {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+
+/* === SECTIUNEA VINTED REVIEWS === */
+.vinted-reviews {
+  padding: 60px 20px;
+  background: #000;
+  text-align: center;
+}
+
+.reviews-title {
+  font-family: 'Saira', sans-serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+.review-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.review {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 20px;
+  color: #fff;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.review:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-4px);
+}
+
+.review p {
+  margin: 0 0 12px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: 'Saira', sans-serif;
+}
+
+.review span {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.75);
+  font-family: 'Saira', sans-serif;
+}
+
+.reviews-link a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-family: 'Saira', sans-serif;
+}
+
+.reviews-link a:hover {
+  color: rgba(255,255,255,0.7);
+}
+
+
+/* === SECTIUNEA EVENIMENT / VINTAGE MARKET === */
+/* === SECTIUNEA EVENIMENT / VINTAGE MARKET === */
+.event-section {
+  padding: 60px 20px 80px;
+  background: #000;
+  text-align: center;
+}
+
+.event-text h2 {
+  font-family: 'Saira', sans-serif;
+  font-weight: 800;
+  font-size: 2.2rem; /* mai mare și mai solid */
+  color: #fff;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+
+.event-text h2 span {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.event-text p {
+  color: rgba(255,255,255,0.85);
+  font-size: 1.25rem; /* puțin mai mare decât înainte */
+  line-height: 1.6;
+  margin-bottom: 50px;
+  font-family: 'Saira', sans-serif;
+}
+
+
