@@ -1,1 +1,191 @@
+@import url('./style-base.css');
+
+/* === HEADER NOU === */
+.main-header {
+  background-color: #000;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* === BARA ANIMATĂ DE SUS === */
+.top-bar {
+  position: relative;
+  background-color: #000;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  height: 28px;
+  overflow: hidden;
+}
+
+.marquee {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.track {
+  display: inline-block;
+  white-space: nowrap;
+  will-change: transform;
+  animation: scroll-text 60s linear infinite;
+}
+
+.track span {
+  display: inline-block;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  padding-right: 3rem;
+}
+
+@keyframes scroll-text {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* === TITLU PRINCIPAL === */
+.brand-title {
+  font-family: "BBH Sans Bartle", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #fff;
+  margin: 16px 0 10px 0;
+}
+.brand-title a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.brand-title a:hover {
+  opacity: 0.8;
+}
+
+
+/* === NAVIGARE + SELECTOR MONEDĂ === */
+.nav-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 18px;
+}
+
+/* Linkuri meniu */
+.simple-nav {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+}
+
+.simple-nav a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: transform 0.25s ease, color 0.25s ease;
+  font-family: 'Saira', sans-serif;
+}
+
+.simple-nav a:hover {
+  transform: scale(1.15);
+  color: #fff;
+}
+
+
+
+
+
+/* Selectorul de monedă — negru + contur alb */
+.currency-selector select {
+  background: #000;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  appearance: none;
+  font-family: 'Saira', sans-serif;
+  transition: all 0.25s ease;
+}
+
+.currency-selector select:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+.currency-selector select:focus {
+  outline: none;
+  border-color: #fff;
+}
+
+/* Meniul dropdown propriu-zis (opțiunile) */
+.currency-selector select option {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 6px;
+}
+
+
+/* === HERO IMAGE SECTION === */
+.hero-image-section {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.hero-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(70%);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.overlay-title {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.overlay-text {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* === POZA MICĂ SUPRAPUSĂ PE HERO === */
+.hero-small-img {
+  width: 280px; /* mai mare */
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 8px; /* mai aproape de text */
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+  opacity: 0.95;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.hero-small-img:hover {
+  transform: scale(1.04);
+  opacity: 1;
+}
+
+
+.hero-small-img:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
 
