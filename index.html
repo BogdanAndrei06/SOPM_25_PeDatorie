@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pe Datorie — Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Pe Datorie</title>
 
-  <!-- fonturile principale -->
+  <!-- fonturile pe care le folosim peste tot -->
   <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-  <!-- css-ul pentru home -->
-  <link rel="stylesheet" href="css/style-home.css" />
+  <!-- fisierele css pentru baza si pagina de contact -->
+  <link rel="stylesheet" href="css/style-base.css">
+  <link rel="stylesheet" href="css/style-contact.css">
 
-  <!-- javascript general -->
+  <!-- scriptul general -->
   <script defer src="js/script.js"></script>
 </head>
-<body>
 
-  <!-- header principal (bara de sus + logo + meniu) -->
+<body>
+  <!-- headerul principal (logo + bara animata + meniu) -->
   <header class="main-header">
 
-    <!-- bara aia animata care merge de la stanga la dreapta -->
+    <!-- bara aia animata care merge non stop -->
     <div class="top-bar">
       <div class="marquee">
         <div class="track">
           <span>
+            +1000 HAPPY CUSTOMERS! • FAST SHIPPING • +1000 HAPPY CUSTOMERS! • FAST SHIPPING •
             +1000 HAPPY CUSTOMERS! • FAST SHIPPING • +1000 HAPPY CUSTOMERS! • FAST SHIPPING •
             +1000 HAPPY CUSTOMERS! • FAST SHIPPING • +1000 HAPPY CUSTOMERS! • FAST SHIPPING •
             +1000 HAPPY CUSTOMERS! • FAST SHIPPING • +1000 HAPPY CUSTOMERS! • FAST SHIPPING •
@@ -36,125 +38,89 @@
       </div>
     </div>
 
-    <!-- zona cu logo-ul mare pe mijloc si meniul sub el -->
+    <!-- zona cu titlu principal si navigarea -->
     <div class="header-center">
       <h1 class="brand-title"><a href="index.html">Pe Datorie</a></h1>
 
-      <!-- meniul de navigare principal -->
+      <!-- meniul principal -->
       <nav class="simple-nav" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="shop.html">Shop</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="active">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- continutul principal -->
-  <main>
+  <!-- sectiunea de inceput, cu titlu si text -->
+  <section class="contact-hero">
+    <h1>hai sa vorbim 💬</h1>
+    <p>ai o intrebare, o propunere sau o colaborare? scrie-ne direct, raspundem destul de repede.</p>
+  </section>
 
-    <!-- poza mare de pe home (hero section) -->
-    <section class="hero-image-section">
-      <div class="hero-image-wrap">
-        <img src="images/poza1.jpg" alt="Poza principala" class="hero-background" />
+  <!-- partea principala cu datele de contact si formularul -->
+  <section class="contact-container">
 
-        <!-- partea de text si logo peste poza -->
-        <div class="hero-overlay">
-          <!-- logo-ul mic din mijloc -->
-          <img src="images/logo.png" alt="Logo mic overlay" class="hero-small-img" />
+    <!-- partea din stanga cu informatii -->
+    <div class="contact-info">
+      <h2>contact direct</h2>
 
-          <!-- titlul si subtitlul -->
-          <h2 class="overlay-title">Vintage. Real. You.</h2>
-          <p class="overlay-text">Descopera piesele care te definesc.</p>
+      <!-- cardul pentru email -->
+      <div class="contact-card">
+        <i class="fa-solid fa-envelope"></i>
+        <p><strong>Email:</strong><br> contact@pedatorie.ro</p>
+      </div>
 
-          <!-- iconitele cu instagram si tiktok -->
-          <div class="social-icons">
-            <a href="https://www.instagram.com/pe.datorie?igsh=MTVuNDg5aTQ0NmFxcw%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">
-              <img src="images/insta.png" alt="Instagram" />
-            </a>
-            <a href="https://www.tiktok.com/@pedatorie?_t=ZN-90bTHiZwLLC&_r=1" target="_blank" rel="noopener" aria-label="TikTok">
-              <img src="images/tiktok.png" alt="TikTok" />
-            </a>
-          </div>
+      <!-- cardul pentru instagram -->
+      <div class="contact-card">
+        <i class="fa-brands fa-instagram"></i>
+        <p><strong>Instagram:</strong><br>
+          <a href="https://instagram.com/pe.datorie" target="_blank">@pe.datorie</a>
+        </p>
+      </div>
+
+      <!-- cardul cu locatia -->
+      <div class="contact-card">
+        <i class="fa-solid fa-location-dot"></i>
+        <p><strong>Locatie:</strong><br> Bucuresti, Romania</p>
+      </div>
+    </div>
+
+    <!-- partea din dreapta cu formularul -->
+    <div class="contact-form">
+      <h2>trimite un mesaj</h2>
+
+      <!-- formularul efectiv -->
+      <form id="contactForm" onsubmit="return handleForm(event)">
+        <!-- nume -->
+        <div class="form-group">
+          <label for="name">Nume</label>
+          <input type="text" id="name" name="name" placeholder="Ex: Andrei Popescu" required>
         </div>
-      </div>
-    </section>
 
-    <!-- sectiunea best of cu pozele care se misca orizontal -->
-    <section class="best-of">
-      <h2 class="section-title">Best of Pe Datorie</h2>
-      <div class="image-marquee">
-        <div class="image-track">
-          <img src="images/poza6.jpg" alt="Best of 1" />
-          <img src="images/poza7.jpg" alt="Best of 2" />
-          <img src="images/poza4.jpg" alt="Best of 3" />
-          <img src="images/poza8.jpg" alt="Best of 4" />
-          <img src="images/poza2.jpg" alt="Best of 5" />
-          <img src="images/poza3.jpg" alt="Best of 6" />
-          <img src="images/poza11.jpg" alt="Best of 7" />
-          <img src="images/poza9.jpg" alt="Best of 8" />
-          <img src="images/poza10.jpg" alt="Best of 9" />
-          <img src="images/poza5.jpg" alt="Best of 10" />
+        <!-- email -->
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Ex: andrei@email.com" required>
         </div>
-      </div>
-    </section>
 
-    <!-- sectiunea cu review-uri copiate de pe vinted -->
-    <section class="vinted-reviews">
-      <h2 class="reviews-title">700+ Reviews</h2>
-      <div class="review-list">
-        <div class="review">
-          <p>„Am avut cea mai fain experienta cu acest vanzator, foarte comunicativ, serios, produsul superb exact asa cum mi s a spus, recomand cu tot dragul!🤍”</p>
-          <span>– pestisorul_auriu ⭐⭐⭐⭐⭐</span>
+        <!-- mesajul propriu zis -->
+        <div class="form-group">
+          <label for="message">Mesaj</label>
+          <textarea id="message" name="message" rows="5" placeholder="Scrie mesajul tau..." required></textarea>
         </div>
-        <div class="review">
-          <p>„Better than perfect! Communication was excellent, shipping was fast, he sent the parcel in the same day, packaging is immaculate and professional, I recommend purchasing items from him, in fact, I hope you do, because I am sure I will. 10/5 stars.💚”</p>
-          <span>– yukenstein ⭐⭐⭐⭐</span>
+
+        <!-- butonul de trimite -->
+        <div class="form-button">
+          <button type="submit" class="btn">Trimite</button>
         </div>
-        <div class="review">
-          <p>„are vorbele la el, este foarte de treaba, toate produsele sunt de calitate maxima, sunt calcate, spalate, ingrijite si trimise in ambalaj premium cu stikere, o treaba foarte buna, puteti cumpara de la el cu incredere mare”</p>
-          <span>– fabianboca15 ⭐⭐⭐⭐⭐</span>
-        </div>
-      </div>
-      <p class="reviews-link">
-        <a href="https://www.vinted.ro/member/187347437?tab=feedback" target="_blank" rel="noopener">vezi toate pe vinted →</a>
-      </p>
-    </section>
 
-    <!-- pozele de la evenimentul vintage market -->
-    <section class="event-section">
-      <div class="event-text">
-        <h2>cunoaste-ne si fizic la <span>Vintage Market Scanteia</span></h2>
-        <p>urmareste-ne pe instagram ca sa afli data urmatorului eveniment</p>
-      </div>
+        <!-- mesajul care apare dupa trimitere -->
+        <p id="formMsg" class="form-message"></p>
+      </form>
+    </div>
+  </section>
 
-      <!-- colajul cu poze din eveniment -->
-      <div class="event-gallery">
-        <img src="images/a4.jpg" alt="Vintage Market 1" />
-        <img src="images/a1.jpg" alt="Vintage Market 2" />
-        <img src="images/a3.jpg" alt="Vintage Market 3" />
-        <img src="images/a2.jpg" alt="Vintage Market 4" />
-        <img src="images/a5.jpg" alt="Vintage Market 5" />
-        <img src="images/a6.jpg" alt="Vintage Market 6" />
-      </div>
-    </section>
-
-    <!-- harta de la final (locatia scanteia) -->
-    <section class="map-section">
-      <h2 class="map-title">Unde mai exact?</h2>
-      <div class="map-container">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2846.609059330868!2d26.067958576565132!3d44.48218559842152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b2030043f7666d%3A0x894f0adeaad292f2!2sSCANTEIA%2B!5e0!3m2!1sro!2sro!4v1760639319714!5m2!1sro!2sro"
-          style="border:0;"
-          allowfullscreen
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- footer-ul de jos -->
+  <!-- footerul general -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-left">
@@ -166,6 +132,5 @@
       </div>
     </div>
   </footer>
-
 </body>
 </html>
