@@ -10,13 +10,17 @@ v 1.3.0 - Update Vinted & Social Media (Actualizate linkurile către conturile I
 
 v 1.3.1 - Debug performanță animatii
 
-v 2.0.0 - Adaugarea cos de cumparaturi
+v 1.4.0 - Adaugare imaginilor pe pagina principala
 
-v 2.1.0 - Adaugare imagini si continut in Shop
+v 1.5.0 - Adaugare harte unde se petrece evenimentul
+
+v 2.0.0 - Lansare cos de cumparaturi
+
+v 2.1.0 - Adaugare imaginilor si continut in Shop
 
 v 2.1.1 - Ajustat spatiul si marginile intre produse
 
-v 3.0.0 - Adaugarea pagina de contact
+v 3.0.0 - Lansare pagina de contact
 
 v 3.1.0 - Adaugarea sectiune: titlu „hai sa vorbim” + text introductiv
 
