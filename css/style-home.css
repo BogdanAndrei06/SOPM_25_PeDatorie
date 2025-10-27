@@ -1,13 +1,19 @@
+/* import stilurile de baza (footer, culori, fonturi) */
 @import url('./style-base.css');
 
-/* === HEADER NOU === */
+/* ======================================
+   headerul general (logo + nav)
+====================================== */
 .main-header {
   background-color: #000;
   text-align: center;
   border-bottom: 1px solid rgba(255,255,255,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-/* === BARA ANIMATĂ DE SUS === */
+/* bara animata de sus cu fast shipping etc */
 .top-bar {
   position: relative;
   background-color: #000;
@@ -16,6 +22,7 @@
   overflow: hidden;
 }
 
+/* structura pentru textul care se misca */
 .marquee {
   position: absolute;
   top: 0;
@@ -25,6 +32,7 @@
   overflow: hidden;
 }
 
+/* textul in miscare efectiv */
 .track {
   display: inline-block;
   white-space: nowrap;
@@ -32,6 +40,7 @@
   animation: scroll-text 60s linear infinite;
 }
 
+/* textul repetat din bara */
 .track span {
   display: inline-block;
   color: rgba(255,255,255,0.9);
@@ -40,20 +49,20 @@
   padding-right: 3rem;
 }
 
+/* animatia care deplaseaza textul */
 @keyframes scroll-text {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
-/* === TITLU PRINCIPAL === */
+/* titlul mare "Pe Datorie" din centru */
 .brand-title {
   font-family: "BBH Sans Bartle", sans-serif;
   font-size: 2.8rem;
-  font-weight: 500;
-  letter-spacing: 1px;
   color: #fff;
-  margin: 16px 0 10px 0;
+  margin: 16px 0 10px;
 }
+
 .brand-title a {
   color: #fff;
   text-decoration: none;
@@ -64,89 +73,47 @@
   opacity: 0.8;
 }
 
-
-/* === NAVIGARE + SELECTOR MONEDĂ === */
-.nav-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  padding-bottom: 18px;
-}
-
-/* Linkuri meniu */
+/* meniul de navigare principal */
 .simple-nav {
   display: flex;
   justify-content: center;
   gap: 36px;
+  padding: 4px 0 20px;
 }
 
 .simple-nav a {
   color: rgba(255,255,255,0.8);
   text-decoration: none;
-  font-size: 1rem;
-  transition: transform 0.25s ease, color 0.25s ease;
   font-family: 'Saira', sans-serif;
+  font-size: 1rem;
+  transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .simple-nav a:hover {
-  transform: scale(1.15);
   color: #fff;
+  transform: scale(1.1);
 }
 
-
-
-
-
-/* Selectorul de monedă — negru + contur alb */
-.currency-selector select {
-  background: #000;
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.4);
-  border-radius: 4px;
-  padding: 4px 10px;
-  font-size: 0.85rem;
-  cursor: pointer;
-  appearance: none;
-  font-family: 'Saira', sans-serif;
-  transition: all 0.25s ease;
-}
-
-.currency-selector select:hover {
-  border-color: #fff;
-  color: #fff;
-}
-
-.currency-selector select:focus {
-  outline: none;
-  border-color: #fff;
-}
-
-/* Meniul dropdown propriu-zis (opțiunile) */
-.currency-selector select option {
-  background-color: #000;
-  color: #fff;
-  border: none;
-  padding: 6px;
-}
-
-
-/* === HERO IMAGE SECTION === */
+/* ======================================
+   hero section - poza mare cu logo si text
+====================================== */
 .hero-image-section {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 85vh;
   overflow: hidden;
 }
 
+/* poza mare de fundal */
 .hero-background {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: brightness(70%);
+  filter: brightness(65%);
 }
 
+/* continutul centrat peste poza (logo + text + social) */
 .hero-overlay {
   position: absolute;
   top: 50%;
@@ -154,75 +121,80 @@
   transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.overlay-title {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
-}
-
-.overlay-text {
-  font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.85);
-}
-
-/* === POZA MICĂ SUPRAPUSĂ PE HERO === */
+/* logo-ul mic de pe poza */
 .hero-small-img {
-  width: 280px; /* mai mare */
+  width: 300px;
+  max-width: 80vw;
   height: auto;
-  border-radius: 12px;
-  margin-bottom: 8px; /* mai aproape de text */
-  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
-  opacity: 0.95;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
   transition: transform 0.4s ease, opacity 0.3s ease;
+  opacity: 0.95;
 }
 
+/* mic efect hover pe logo */
 .hero-small-img:hover {
   transform: scale(1.04);
   opacity: 1;
 }
 
-
-.hero-small-img:hover {
-  transform: scale(1.05);
-  opacity: 1;
+/* titlul sub logo ("Vintage. Real. You.") */
+.overlay-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+  font-family: 'Saira', sans-serif;
 }
 
-/* === SOCIAL ICONS PE HERO === */
+/* subtitlul ("Descopera piesele...") */
+.overlay-text {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 16px;
+  font-family: 'Saira', sans-serif;
+}
+
+/* iconitele de instagram si tiktok */
 .social-icons {
-  margin-top: 20px;
+  margin-top: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 26px;
+  gap: 28px;
 }
 
 .social-icons img {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
   filter: brightness(90%);
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+/* efect hover pe iconite */
 .social-icons img:hover {
   transform: scale(1.15);
   filter: brightness(110%);
 }
 
-
-/* === RESTUL === */
-.hero {padding:80px 0}
-
-
-/* === BEST OF SECTION === */
+/* ======================================
+   sectiunea "best of" cu poze care se misca orizontal
+====================================== */
 .best-of {
   padding: 60px 0;
   text-align: center;
   overflow: hidden;
 }
 
+/* titlul "Best of Pe Datorie" */
 .best-of .section-title {
   font-size: 1.8rem;
   margin-bottom: 20px;
@@ -231,19 +203,21 @@
   color: #fff;
 }
 
-/* Containerul orizontal */
+/* containerul care tine imaginile */
 .image-marquee {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
 
+/* randul cu poze care se misca */
 .image-track {
   display: flex;
   gap: 12px;
   animation: slideImages 15s linear infinite;
 }
 
+/* fiecare poza din best of */
 .image-track img {
   width: 300px;
   height: 400px;
@@ -252,31 +226,33 @@
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* Hover efect – stop animatie + zoom subtil */
+/* cand treci peste zona, se opreste animatia */
 .image-marquee:hover .image-track {
   animation-play-state: paused;
 }
 
+/* zoom subtil pe hover */
 .image-track img:hover {
   transform: scale(1.05);
   filter: brightness(1.1);
 }
 
-/* Animația de mișcare continuă */
+/* animatia care misca pozele in bucla */
 @keyframes slideImages {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
-
-
-/* === SECTIUNEA VINTED REVIEWS === */
+/* ======================================
+   review-urile de pe Vinted
+====================================== */
 .vinted-reviews {
   padding: 60px 20px;
   background: #000;
   text-align: center;
 }
 
+/* titlul mare "700+ reviews" */
 .reviews-title {
   font-family: 'Saira', sans-serif;
   font-weight: 600;
@@ -286,6 +262,7 @@
   letter-spacing: 0.5px;
 }
 
+/* grila cu cele 3 review-uri */
 .review-list {
   max-width: 900px;
   margin: 0 auto;
@@ -294,6 +271,7 @@
   gap: 24px;
 }
 
+/* fiecare card de review */
 .review {
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.1);
@@ -303,66 +281,103 @@
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
+/* efect mic cand treci peste review */
 .review:hover {
   background: rgba(255,255,255,0.1);
   transform: translateY(-4px);
 }
 
-.review p {
-  margin: 0 0 12px 0;
-  font-size: 1rem;
-  line-height: 1.5;
-  font-family: 'Saira', sans-serif;
-}
-
-.review span {
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.75);
-  font-family: 'Saira', sans-serif;
-}
-
-.reviews-link a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  font-family: 'Saira', sans-serif;
-}
-
-.reviews-link a:hover {
-  color: rgba(255,255,255,0.7);
-}
-
-
-/* === SECTIUNEA EVENIMENT / VINTAGE MARKET === */
-/* === SECTIUNEA EVENIMENT / VINTAGE MARKET === */
+/* ======================================
+   sectiunea de eveniment (vintage market)
+====================================== */
 .event-section {
-  padding: 60px 20px 80px;
+  padding: 60px 20px 100px;
   background: #000;
   text-align: center;
 }
 
+/* titlul "Cunoaste-ne si fizic..." */
 .event-text h2 {
   font-family: 'Saira', sans-serif;
-  font-weight: 800;
-  font-size: 2.2rem; /* mai mare și mai solid */
+  font-weight: 700;
+  font-size: 2rem;
   color: #fff;
   margin-bottom: 16px;
+}
+
+/* textul de sub titlu */
+.event-text p {
+  color: rgba(255,255,255,0.8);
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  font-family: 'Saira', sans-serif;
+}
+
+/* galeria cu poze de la eveniment */
+.event-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* fiecare poza din galerie */
+.event-gallery img {
+  border-radius: 12px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  max-width: 360px;
+}
+
+/* efect hover pe poze */
+.event-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 60px rgba(0,0,0,0.6);
+}
+
+/* ======================================
+   harta cu locatia (scanteia)
+====================================== */
+.map-section {
+  background: #000;
+  text-align: center;
+  padding: 70px 20px 100px;
+}
+
+/* titlul de deasupra hartii */
+.map-title {
+  font-family: 'Saira', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 30px;
   letter-spacing: 0.5px;
 }
 
-.event-text h2 span {
-  color: #fff;
-  text-decoration: underline;
-  text-underline-offset: 6px;
+/* containerul rotunjit care tine iframe-ul */
+.map-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(255,255,255,0.07);
 }
 
-.event-text p {
-  color: rgba(255,255,255,0.85);
-  font-size: 1.25rem; /* puțin mai mare decât înainte */
-  line-height: 1.6;
-  margin-bottom: 50px;
-  font-family: 'Saira', sans-serif;
+/* iframe-ul de google maps */
+.map-container iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+  border-radius: 18px;
+  filter: grayscale(25%) brightness(90%) contrast(95%);
+  transition: filter 0.4s ease, transform 0.3s ease;
 }
 
-
+/* cand treci peste harta se lumineaza putin */
+.map-container iframe:hover {
+  filter: grayscale(0%) brightness(100%) contrast(100%);
+  transform: scale(1.01);
+}
