@@ -1,1 +1,248 @@
+/* import stilurile de baza (footer, culori etc) */
+@import url('./style-base.css');
 
+/* ============================================
+   headerul principal - acelasi ca pe home/shop
+============================================ */
+.main-header {
+  background-color: #000;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* bara aia animata de sus */
+.top-bar {
+  position: relative;
+  background-color: #000;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  height: 28px;
+  overflow: hidden;
+}
+
+/* textul care se misca in bara */
+.marquee .track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-text 60s linear infinite;
+}
+
+/* animatia propriu-zisa */
+@keyframes scroll-text {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* titlul principal "Pe Datorie" din mijloc */
+.brand-title {
+  font-family: "BBH Sans Bartle", sans-serif;
+  font-size: 2.8rem;
+  color: #fff;
+  margin: 16px 0 10px 0;
+}
+
+.brand-title a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.brand-title a:hover {
+  opacity: 0.8;
+}
+
+/* meniul cu home / shop / contact */
+.simple-nav {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  padding: 4px 0 20px;
+}
+
+.simple-nav a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-family: 'Saira', sans-serif;
+  font-size: 1rem;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.simple-nav a:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* ============================================
+   setari generale pentru pagina de contact
+============================================ */
+body {
+  font-family: 'Saira', sans-serif;
+  background-color: #0f0f0f;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================
+   sectiunea de sus (titlu + text mic)
+============================================ */
+.contact-hero {
+  text-align: center;
+  padding: 6rem 2rem 3rem;
+  background: linear-gradient(135deg, #1a1a1a, #222);
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* titlul mare din hero ("hai sa vorbim") */
+.contact-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* textul de sub titlu */
+.contact-hero p {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+/* ============================================
+   containerul mare cu stanga (info) + dreapta (formular)
+============================================ */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 4rem 8%;
+}
+
+/* titlurile "contact direct" si "trimite un mesaj" */
+.contact-info h2,
+.contact-form h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ============================================
+   cardurile cu email / instagram / locatie
+============================================ */
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  background: #181818;
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: 0.3s;
+}
+
+/* mic efect cand treci peste card */
+.contact-card:hover {
+  transform: translateY(-4px);
+  background: #222;
+}
+
+/* iconitele din stanga (envelope, insta, map) */
+.contact-card i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* linkurile din carduri (instagram) */
+.contact-card a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   formularul din partea dreapta
+============================================ */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #181818;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/* label-urile de la nume/email/mesaj */
+.form-group label {
+  color: #bbb;
+  font-weight: 500;
+}
+
+/* campurile de input si textarea */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 0.8rem;
+  background: #222;
+  color: #fff;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+/* cand apesi in camp (focus) */
+.form-group input:focus,
+.form-group textarea:focus {
+  background: #2d2d2d;
+  outline: 1px solid #fff;
+}
+
+/* zona butonului "Trimite" */
+.form-button {
+  display: flex;
+  justify-content: center;
+}
+
+/* stilul butonului alb de trimitere */
+.btn {
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* efect hover pe buton */
+.btn:hover {
+  background: #ddd;
+}
+
+/* textul mic care apare dupa ce trimiti formularul */
+.form-message {
+  text-align: center;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* ============================================
+   responsive - cand e ecran mic pun totul pe o coloana
+============================================ */
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    padding: 2rem 5%;
+  }
+}
