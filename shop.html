@@ -3,69 +3,161 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PeDatorie — Shop</title>
+  <title>Pe Datorie — Shop</title>
+
+  <!-- fonturile principale folosite peste tot -->
+  <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- css-ul doar pentru pagina shop -->
   <link rel="stylesheet" href="css/style-shop.css" />
-  <script defer src="js/script.js"></script>
+
+  <!-- scriptul pentru shop -->
+  <script defer src="js/script-shop.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <span class="brand-mark">PD</span>
-        <span class="brand-name">PeDatorie</span>
-      </a>
 
-      <nav class="main-nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="shop.html" class="nav-link active">Shop</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+  <!-- headerul de sus, acelasi ca pe home -->
+  <header class="main-header">
+
+    <!-- bara aia animata cu fast shipping etc -->
+    <div class="top-bar">
+      <div class="marquee">
+        <div class="track">
+          <span>
+            +1000 HAPPY CUSTOMERS! • FAST SHIPPING • +1000 HAPPY CUSTOMERS! • FAST SHIPPING •
+            +1000 HAPPY CUSTOMERS! • FAST SHIPPING • +1000 HAPPY CUSTOMERS! • FAST SHIPPING •
+            +1000 HAPPY CUSTOMERS! • FAST SHIPPING • +1000 HAPPY CUSTOMERS! • FAST SHIPPING •
+            +1000 HAPPY CUSTOMERS! • FAST SHIPPING • +1000 HAPPY CUSTOMERS! • FAST SHIPPING •
+            +1000 HAPPY CUSTOMERS! • FAST SHIPPING • +1000 HAPPY CUSTOMERS! • FAST SHIPPING •
+            +1000 HAPPY CUSTOMERS! • FAST SHIPPING • +1000 HAPPY CUSTOMERS! • FAST SHIPPING •
+            +1000 HAPPY CUSTOMERS! • FAST SHIPPING • +1000 HAPPY CUSTOMERS! • FAST SHIPPING •
+            +1000 HAPPY CUSTOMERS! • FAST SHIPPING • +1000 HAPPY CUSTOMERS! • FAST SHIPPING •
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- partea cu logo-ul si meniul din mijloc -->
+    <div class="header-center">
+      <h1 class="brand-title"><a href="index.html">Pe Datorie</a></h1>
+
+      <!-- meniul principal cu cele 3 pagini -->
+      <nav class="simple-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="contact.html">Contact</a>
       </nav>
-
-      <button class="cta-btn">Coș</button>
     </div>
   </header>
 
-  <main>
-    <section class="shop-hero">
-      <div class="container">
-        <h2 class="section-title">New Drop</h2>
-        <p class="muted">Produse alese — alb & negru, minimalist.</p>
+  <!-- continutul principal -->
+  <main class="shop-main">
+
+    <!-- sectiunea cu grila de produse -->
+    <section class="shop-grid">
+      <!-- titlul mare de sus din shop -->
+      <h2 class="shop-title">Our Collection</h2>
+
+      <!-- grila 3x3 cu toate produsele -->
+      <div class="products">
+
+        <!-- produs 1 -->
+        <div class="product">
+          <img src="images/shop1.jpg" alt="Tricou Patagonia" />
+          <div class="product-info">
+            <h3 class="product-title">Tricou Patagonia</h3>
+            <p class="price">199 Lei</p>
+          </div>
+        </div>
+
+        <!-- produs 2 -->
+        <div class="product">
+          <img src="images/shop2.jpg" alt="Tricou Aape" />
+          <div class="product-info">
+            <h3 class="product-title">Tricou Aape</h3>
+            <p class="price">249 Lei</p>
+          </div>
+        </div>
+
+        <!-- produs 3 -->
+        <div class="product">
+          <img src="images/shop3.jpg" alt="Geaca The North Face" />
+          <div class="product-info">
+            <h3 class="product-title">Geaca The North Face</h3>
+            <p class="price">649 Lei</p>
+          </div>
+        </div>
+
+        <!-- produs 4 -->
+        <div class="product">
+          <img src="images/shop4.jpg" alt="Tricou fotbal PSG" />
+          <div class="product-info">
+            <h3 class="product-title">Tricou fotbal PSG</h3>
+            <p class="price">349 Lei</p>
+          </div>
+        </div>
+
+        <!-- produs 5 -->
+        <div class="product">
+          <img src="images/shop5.jpg" alt="Tricou Karl Lagerfeld" />
+          <div class="product-info">
+            <h3 class="product-title">Tricou Karl Lagerfeld</h3>
+            <p class="price">149 Lei</p>
+          </div>
+        </div>
+
+        <!-- produs 6 -->
+        <div class="product">
+          <img src="images/shop6.jpg" alt="Tricou polo Ralph Lauren" />
+          <div class="product-info">
+            <h3 class="product-title">Tricou polo Ralph Lauren</h3>
+            <p class="price">149 Lei</p>
+          </div>
+        </div>
+
+        <!-- produs 7 -->
+        <div class="product">
+          <img src="images/shop7.jpg" alt="Pantaloni Dickies" />
+          <div class="product-info">
+            <h3 class="product-title">Pantaloni Dickies</h3>
+            <p class="price">129 Lei</p>
+          </div>
+        </div>
+
+        <!-- produs 8 -->
+        <div class="product">
+          <img src="images/shop8.jpg" alt="Tricou polo Ralph Lauren" />
+          <div class="product-info">
+            <h3 class="product-title">Tricou polo Ralph Lauren</h3>
+            <p class="price">149 Lei</p>
+          </div>
+        </div>
+
+        <!-- produs 9 -->
+        <div class="product">
+          <img src="images/shop9.jpg" alt="Blugi Levi Strauss & Co." />
+          <div class="product-info">
+            <h3 class="product-title">Blugi Levi Strauss & Co.</h3>
+            <p class="price">99 Lei</p>
+          </div>
+        </div>
+
       </div>
-    </section>
-
-    <section class="product-grid container">
-      <article class="product-card">
-        <div class="product-media">
-          <img src="#" alt="Produs 1">
-        </div>
-        <div class="product-body">
-          <h4 class="product-title">Hanorac minimalist</h4>
-          <p class="product-price">149 RON</p>
-        </div>
-      </article>
-
-      <article class="product-card">
-        <div class="product-media">
-          <img src="#" alt="Produs 2">
-        </div>
-        <div class="product-body">
-          <h4 class="product-title">Tricou alb oversized</h4>
-          <p class="product-price">99 RON</p>
-        </div>
-      </article>
     </section>
   </main>
 
+  <!-- footerul de jos, acelasi pe toate paginile -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-left">
-        <strong>PeDatorie</strong>
-        <p class="muted">© <span id="year2"></span> PeDatorie</p>
+        <strong>Pe Datorie</strong>
+        <p class="muted">© <span id="year"></span> Pe Datorie — All rights reserved.</p>
       </div>
       <div class="footer-right">
         <a class="muted" href="mailto:contact@pedatorie.ro">contact@pedatorie.ro</a>
       </div>
     </div>
   </footer>
+
 </body>
 </html>
