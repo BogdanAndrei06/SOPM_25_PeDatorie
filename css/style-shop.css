@@ -1,1 +1,172 @@
+/* import stilurile de baza (footer, fonturi, culori etc) */
+@import url('./style-base.css');
 
+/* ============================================
+   headerul de sus (logo + meniu)
+============================================ */
+.main-header {
+  background-color: #000;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  top: 0;
+  z-index: 10;
+}
+
+/* bara aia animata de sus (fast shipping etc) */
+.top-bar {
+  position: relative;
+  background-color: #000;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  height: 28px;
+  overflow: hidden;
+}
+
+/* textul care se plimba in bara */
+.marquee .track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-text 60s linear infinite;
+}
+
+/* animatia care misca textul la infinit */
+@keyframes scroll-text {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* titlul mare "Pe Datorie" de sub bara */
+.brand-title {
+  font-family: "BBH Sans Bartle", sans-serif;
+  font-size: 2.8rem;
+  color: #fff;
+  margin: 16px 0 10px 0;
+}
+
+.brand-title a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+/* efect mic cand treci peste titlu */
+.brand-title a:hover {
+  opacity: 0.8;
+}
+
+/* randul cu linkurile principale (home / shop / contact) */
+.nav-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+/* meniul simplu sub titlu */
+.simple-nav {
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  padding: 4px 0 20px;
+}
+
+.simple-nav a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-family: 'Saira', sans-serif;
+  font-size: 1rem;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+/* hover mic pe butoanele din meniu */
+.simple-nav a:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* ============================================
+   zona principala - shop grid
+============================================ */
+.shop-main {
+  background: #000;
+  color: #fff;
+  padding: 60px 20px;
+}
+
+/* titlul mare "Our Collection" */
+.shop-title {
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Saira', sans-serif;
+  margin-bottom: 40px;
+}
+
+/* grila de produse (3 coloane pe desktop) */
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* cardul fiecarui produs */
+.product {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* cand treci peste produs, se ridica putin */
+.product:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.1);
+}
+
+/* poza produsului */
+.product img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* zona de sub poza (titlu + pret) */
+.product-info {
+  text-align: center;
+  padding: 12px 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* titlul produsului */
+.product-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-family: 'Saira', sans-serif;
+}
+
+/* pretul in lei */
+.price {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.9);
+  font-family: 'Saira', sans-serif;
+}
+
+/* ============================================
+   responsive grid - cum se adapteaza pe ecrane mici
+============================================ */
+
+/* pe tableta (max 900px) - doua coloane */
+@media (max-width: 900px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* pe telefon (max 600px) - o singura coloana */
+@media (max-width: 600px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+}
