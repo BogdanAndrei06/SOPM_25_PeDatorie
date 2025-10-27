@@ -1,1 +1,107 @@
+/* fontul principal pe care il folosesc peste tot */
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@300;400;600;700&display=swap');
+
+/* aici am facut resetul de baza ca sa nu se strice marginile implicite */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* fundalul negru de baza + fontul general */
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Saira', sans-serif;
+  line-height: 1.5;
+}
+
+/* containerul central folosit in footer si alte sectiuni */
+.container {
+  width: 90%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* =====================
+   butoane comune
+===================== */
+
+/* stilul de baza pt toate butoanele */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-family: 'Saira', sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* butonul alb principal */
+.btn-primary {
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+}
+
+/* butonul transparent (gen “ghost”) */
+.btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* mic efect cand treci cu mouseul peste butoane */
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* =====================
+   footerul comun
+===================== */
+
+/* footerul care e jos pe toate paginile */
+.site-footer {
+  padding: 26px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 40px;
+  background: #000;
+}
+
+/* containerul din interiorul footerului (stanga + dreapta) */
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* textul gri folosit in footer */
+.muted {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* text mai mic (pentru copyright etc) */
+.small {
+  font-size: 0.9rem;
+}
+
+/* =====================
+   responsive
+===================== */
+
+/* cand e ecranul mic, pun footerul pe verticala */
+@media (max-width: 880px) {
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 
