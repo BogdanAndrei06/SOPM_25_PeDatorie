@@ -10,5 +10,11 @@ v 1.3.0 - Update Vinted & Social Media (Actualizate linkurile către conturile I
 
 v 1.3.1 - Debug performanță animatii
 
-v 2.0.0 - Cos de cumparaturi 
+v 2.0.0 - Adaugarea cos de cumparaturi
+
+v 2.1.0 - Adaugare imagini si continut in Shop
+
+v 2.1.1 - Ajustat spatiul si marginile intre produse
+
+
 
