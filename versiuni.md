@@ -16,5 +16,11 @@ v 2.1.0 - Adaugare imagini si continut in Shop
 
 v 2.1.1 - Ajustat spatiul si marginile intre produse
 
+v 3.0.0 - Adaugarea pagina de contact
+
+v 3.1.1 - Adaugarea sectiune: titlu „hai sa vorbim” + text introductiv
+
+v 4.0.0 - Corectii minore de spatiere si aliniere in toate paginile
+
 
 
